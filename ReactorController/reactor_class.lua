@@ -7,11 +7,14 @@ function Reactor:Create()
     reactor = nil
   }
 
+  local reactorFile = function (file)
+    return "ReactorController.reactor."..file
+  end
 
   this.reactor = peripheral.find("BiggerReactors_Reactor")
 
   if (this.reactor  ~= nil) then
-    require("reactors.bigger")
+    require(reactorFile("bigger"))
     setmetatable(this, BiggerReactor)
     return this
   end
@@ -19,7 +22,7 @@ function Reactor:Create()
   this.reactor = peripheral.find("bigger-reactor")
 
   if (this.reactor ~= nil) then
-    require("reactors.big")
+    require(reactorFile("big"))
     setmetatable(this, BigReactor)
     return this
   end
@@ -27,7 +30,7 @@ function Reactor:Create()
   this.reactor = peripheral.find("BigReactors-Reactor")
 
   if (this.reactor ~= nil) then
-    require("reactors.extreme")
+    require(reactorFile("extreme"))
     setmetatable(this, ExtremeReactor)
   end
 
