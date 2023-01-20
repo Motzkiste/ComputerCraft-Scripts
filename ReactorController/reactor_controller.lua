@@ -15,11 +15,11 @@ while true do
 
     local rodLevel = 0
     local currentBufferRF = reactor:GetEnergyStored()
-    if (currentBufferRF > minBuffer) then
-      if (currentBufferRF > targetBuffer) then
+    if (currentBufferRF > minBufferRF) then
+      if (currentBufferRF > targetBufferRF) then
         rodLevel = 100
       else
-        rodLevel = (currentBufferRF / targetBuffer) * 100
+        rodLevel = (currentBufferRF / targetBufferRF) * 100
       end
     end
 
