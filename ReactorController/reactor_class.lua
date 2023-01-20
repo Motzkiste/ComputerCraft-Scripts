@@ -18,7 +18,7 @@ function Reactor:Create()
   end
 
   local reactorFile = function (file)
-    return "ReactorController.reactor."..file
+    return "ReactorController.reactors."..file
   end
 
   this.reactor = peripheral.find("BiggerReactors_Reactor")
