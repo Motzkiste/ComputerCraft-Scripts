@@ -1,7 +1,7 @@
 BigReactor = {}
 BigReactor.__index = BigReactor
 
-function BigReactor:GetEnergyStoredThisTick()
+function BigReactor:GetEnergyStored()
   return self.reactor.getEnergyStored()
 end
 

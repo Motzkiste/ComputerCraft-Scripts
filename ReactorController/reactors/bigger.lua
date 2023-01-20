@@ -1,7 +1,7 @@
 BiggerReactor = {}
 BiggerReactor.__index = BiggerReactor
 
-function BiggerReactor:EnergyStoredThisTick()
+function BiggerReactor:EnergyStored()
   return self.reactor.battery().stored()
 end
 

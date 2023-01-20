@@ -1,7 +1,7 @@
 ExtremeReactor = {}
 ExtremeReactor.__index = ExtremeReactor
 
-function ExtremeReactor:GetEnergyStoredThisTick()
+function ExtremeReactor:GetEnergyStored()
   local energyStats = self.reactor.getEnergyStats()
   return energyStats.energyStored
 end

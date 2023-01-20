@@ -11,6 +11,7 @@ print("creating dirs...")
 shell.run("mkdir ReactorController/reactors")
 
 print("downloading scripts...")
+download("ReactorController/reactor_controller.lua")
 download("ReactorController/reactor_class.lua")
 download("ReactorController/reactors/big.lua")
 download("ReactorController/reactors/bigger.lua")
