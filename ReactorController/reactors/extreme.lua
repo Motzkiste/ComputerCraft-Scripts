@@ -21,7 +21,7 @@ function ExtremeReactor:ControlRodLevel()
 end
 
 function ExtremeReactor:BurnedFuelLastTick()
-  local fuelStats = sekf.reactor.getFuelStats()
+  local fuelStats = self.reactor.getFuelStats()
   return fuelStats.fuelConsumedLastTick / 1000
 end
 
