@@ -7,6 +7,16 @@ function Reactor:Create()
     reactor = nil
   }
 
+  --starts the reactor
+  function this:Start()
+    self.reactor.setActive(true)
+  end
+
+  --stops the reactor
+  function this:Stop()
+    self.reactor.setActive(false)
+  end
+
   local reactorFile = function (file)
     return "ReactorController.reactor."..file
   end
